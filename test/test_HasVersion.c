@@ -8,7 +8,7 @@ void SDL_VERSION_returns_compiled_against_version_2_0(void){
     /* =====[ Operate ]===== */
     SDL_VERSION(&compiled);
     printf(
-        "Compiled against SDL version %d.%d.%d.\n",
+        "\nCompiled against SDL version %d.%d.%d.\n",
         compiled.major,
         compiled.minor,
         compiled.patch
@@ -23,7 +23,7 @@ void SDL_GetVersion_returns_linked_against_version_2_0(void){
     /* =====[ Operate ]===== */
     SDL_GetVersion(&linked);
     printf(
-        "Linked against SDL version %d.%d.%d.\n",
+        "\nLinked against SDL version %d.%d.%d.\n",
         linked.major,
         linked.minor,
         linked.patch

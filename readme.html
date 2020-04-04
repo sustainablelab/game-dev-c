@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Build game-dev</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="pandoc.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Build <code>game-dev</code></h1>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#build-testsuite.exe-from-test_runner.c">Build <code>TestSuite.exe</code> from <code>test_runner.c</code></a><ul>
+<li><a href="#cygwin">Cygwin</a></li>
+<li><a href="#native-windows">Native Windows</a></li>
+</ul></li>
+<li><a href="#display-test-results-in-vim">Display Test Results in Vim</a></li>
+</ul>
+</nav>
+<h1 id="build-testsuite.exe-from-test_runner.c">Build <code>TestSuite.exe</code> from <code>test_runner.c</code></h1>
+<p>The build runs the <code>.exe</code> and outputs the test results markdown file.</p>
+<h2 id="cygwin">Cygwin</h2>
+<p>Builds for Cygwin require an X11 XServer and windows manager on Port 0:0 to run the executable.</p>
+<p>For cygwin with gcc:</p>
+<pre class="vim"><code>;mkgc</code></pre>
+<p>For cygwin with g++:</p>
+<pre class="vim"><code>;mkg+</code></pre>
+<p>For cygwin with clang</p>
+<pre class="vim"><code>;mkcl</code></pre>
+<p>For cygwin with clang++:</p>
+<pre class="vim"><code>;mkc+</code></pre>
+<h2 id="native-windows">Native Windows</h2>
+<p>For mingw with gcc:</p>
+<pre class="vim"><code>;mkwgc</code></pre>
+<p>For mingw with g++:</p>
+<pre class="vim"><code>;mkwg+</code></pre>
+<p>For mingw with clang</p>
+<pre class="vim"><code>;mkwcl</code></pre>
+<p>For mingw with clang++:</p>
+<pre class="vim"><code>;mkwc+</code></pre>
+<h1 id="display-test-results-in-vim">Display Test Results in Vim</h1>
+<p>This also runs the <code>.exe</code> but it has the additional step of opening a window in Vim to display the test results.</p>
+<p>Just replace the <code>k</code> in all the shortcuts with <code>t</code>.</p>
+<p>This is my traditional route. The alternative with <code>k</code> is to then <code>pandoc</code> the test results to an <code>html</code> file and refresh the view in Chrome.</p>
+<ul>
+<li>[ ] fix the output from the Unity C unit test framework to be markdown friendly by eliminating the underscores from the test names</li>
+</ul>
+</body>
+</html>
